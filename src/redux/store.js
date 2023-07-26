@@ -17,4 +17,6 @@ const initialState = {
 const rootReducer = (state = initialState, action) => {
   return state;
 };
+
 export const store = createStore(rootReducer);
+console.log(store.getState());
