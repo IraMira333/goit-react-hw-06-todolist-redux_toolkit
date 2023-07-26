@@ -1,3 +1,4 @@
+import { devToolsEnhancer } from '@redux-devtools/extension';
 import { createStore } from 'redux';
 
 const initialState = {
@@ -17,6 +18,8 @@ const initialState = {
 const rootReducer = (state = initialState, action) => {
   return state;
 };
+// Створюємо розширення стора, щоб додати інструменти розробника
+const enhancer = devToolsEnhancer();
 
-export const store = createStore(rootReducer);
+export const store = createStore(rootReducer, enhancer);
 console.log(store.getState());
