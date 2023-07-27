@@ -1,5 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { rootReducer } from './reducer';
-const store = configureStore({
-  reducer: rootReducer,
+import { tasksReducer, filtersReducer } from './reducer';
+export const store = configureStore({
+  reducer: {
+    tasks: tasksReducer,
+    filters: filtersReducer,
+  },
 });
