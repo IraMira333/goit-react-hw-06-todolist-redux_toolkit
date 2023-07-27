@@ -1,6 +1,12 @@
 import { statusFilters } from './constants';
 
-const tasksInitialState = [];
+const tasksInitialState = [
+  { id: 0, text: 'Learn HTML and CSS', completed: true },
+  { id: 1, text: 'Get good at JavaScript', completed: true },
+  { id: 2, text: 'Master React', completed: false },
+  { id: 3, text: 'Discover Redux', completed: false },
+  { id: 4, text: 'Build amazing apps', completed: false },
+];
 
 export const tasksReducer = (state = tasksInitialState, action) => {
   switch (action.type) {
@@ -22,8 +28,7 @@ export const tasksReducer = (state = tasksInitialState, action) => {
 const filtersInitialState = {
   status: statusFilters.all,
 };
-// Відповідає лише за оновлення властивості filters
-// Тепер значенням параметра state буде об'єкт фільтрів
+
 export const filtersReducer = (state = filtersInitialState, action) => {
   switch (action.type) {
     case 'filters/setStatusFilter':
