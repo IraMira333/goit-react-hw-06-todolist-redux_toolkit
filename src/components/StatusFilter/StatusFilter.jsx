@@ -1,10 +1,9 @@
 import { Button } from 'components/Button/Button';
 import css from './StatusFilter.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-// Імпортуємо об'єкт значень фільтра
-import { statusFilters } from '../../redux/constants';
 import { getStatusFilter } from 'redux/selector';
-import { setStatusFilter } from 'redux/actions';
+import { setStatusFilter } from 'redux/filtersSlice';
+import { statusFilters } from 'redux/constants';
 
 export const StatusFilter = () => {
   // Отримуємо посилання на функцію відправки екшенів
